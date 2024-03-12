@@ -40,16 +40,35 @@
 // Удалите добавленный узел
 
 // создаем элемент
-const p4El = document.createElement('p');
-p4El.textContent = 'Новый текстовый элемент';
+// const p4El = document.createElement('p');
+// p4El.textContent = 'Новый текстовый элемент';
 
 // найдем целевой элемент куда надо всвить текст
-const content = document.querySelector('.content');
+// const content = document.querySelector('.content');
 // добавляем текст в div с классом content
-content.appendChild(p4El);
+// content.appendChild(p4El);
 
 // удаляем узел напрямую p
 // p4El.remove();
 
 // удаляем p через родителя
-content.removeChild(p4El);
+// content.removeChild(p4El);
+
+// задание 4
+// Создать элемент button, добавить в блок <div class="content"></div>
+// При клике на который в консоль выводится сколько раз пользователь нажал на данную кнопку
+
+// const content = document.querySelector('.contents');
+// const btn = document.createElement('button');
+
+// // текст кнопки
+// btn.textContent = 'счетчик';
+// content.appendChild(btn);
+
+// let count = 0;
+
+// // действия по нажатию
+// btn.onclick = function() {
+//     count++;
+//     console.log(`нажата кнопка ${count} раз`);
+// }
