@@ -72,3 +72,22 @@
 //     count++;
 //     console.log(`нажата кнопка ${count} раз`);
 // }
+
+// задание 5
+// Дан тег <div class="content"></div> 
+// Создайте с помощью javascript новый элемент button
+// Добавьте текст для кнопки “Отправить”
+// При клике на данную кнопку необходимо чтобы текст поменялся на “Текст отправлен”
+
+// // ищем нужный класс
+// const content = document.querySelector('.content');
+// // создаем кнопку
+// const btn = document.createElement('button');
+// // // текст кнопки
+// btn.textContent = 'отправить';
+// // добавляем кнопку в тег div
+// content.appendChild(btn);
+// // метод листенер
+// btn.addEventListener('click', () => {
+//     btn.textContent = 'текст отправлен';
+// });
