@@ -30,3 +30,26 @@
 // работа с изображением
 // const img = document.querySelector('.photo');
 // img.src = './photo.jpg';
+
+
+// задание 3
+// Дан тег <div class="content"></div> 
+// Создайте новый элемент p
+// Добавьте в него текст “Новый текстовый элемент”
+// Добавьте созданный элемент внутри <div class="content"></div>
+// Удалите добавленный узел
+
+// создаем элемент
+const p4El = document.createElement('p');
+p4El.textContent = 'Новый текстовый элемент';
+
+// найдем целевой элемент куда надо всвить текст
+const content = document.querySelector('.content');
+// добавляем текст в div с классом content
+content.appendChild(p4El);
+
+// удаляем узел напрямую p
+// p4El.remove();
+
+// удаляем p через родителя
+content.removeChild(p4El);
