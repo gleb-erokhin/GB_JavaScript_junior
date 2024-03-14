@@ -58,3 +58,7 @@ const targetElement = document.querySelector('.card');
 targetElement.appendChild(elementP);
 
 // 8. Удалите тег h6 на странице.
+console.log(`8. Удаляем заголовок h6 после заголовка Card title `);
+
+const findHeader = document.querySelector('h6');
+findHeader.remove();
