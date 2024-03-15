@@ -17,3 +17,16 @@ newDiv.style.color = 'blue';
 newDiv.style.border = '1px solid black';
 newDiv.style.backgroundColor = '#f8f8f8';
 newDiv.style.padding = '16px';
+
+// задание 2
+// Дан код
+// Необходимо с помощью querySelector найти параграф с классом text
+const text = document.querySelector('.text');
+// Вывести в консоль соседний элемент h2
+console.log(text.previousElementSibling);
+// Вывести в консоль родительский элемент content
+console.log(text.parentElement);
+// Вывести в консоль картинку
+console.log(text.parentNode.previousElementSibling);
+// Вывести в консоль родительский элемент elem
+console.log(text.parentNode.parentNode);
