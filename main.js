@@ -46,3 +46,31 @@
 //     parent = parent.parentElement;
 // }
 
+// задание 4
+
+// Дано поле ввода и кнопка отправить, необходим реализовать функционал, если пользователь нажимает на кнопку отправить, а поле ввода пустое, то под полем ввода и кнопкой должен появиться заголовок h2 с текстом вы не заполнили поле ввода
+// Цвет у рамки сделать красным
+
+const input = document.querySelector("input");
+const btn = document.querySelector(".btn");
+// переменная для поиска
+let h2 = document.querySelector("h2");
+// слушаем событие наатие кнопки( собитие КЛИК, стрелочная функция)
+btn.addEventListener("click", (e) => {
+  // чтобы при сработке не отправлялась форма
+  e.preventDefault();
+  if (input.value.trim() === "") {
+    if (!h2) {
+      h2 = document.createElement("h2");
+      // обратились к инпуту, нашли родителя - тег ФОРМА, тегу форма вызываем метод INSERT и вставляем элемент h2
+      // после тега ФОРМ
+      input.parentElement.insertAdjacentElement("afterend", h2);
+    }
+    h2.textContent = "вы не заполнили поле ввода";
+    // делаем рамку красной
+    input.style.border = "3px solid red";
+  } else {
+    h2.remove();
+    input.style.border = "1px solid green";
+  }
+});
