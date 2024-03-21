@@ -53,3 +53,41 @@ btns[5].addEventListener('click', () => {
     btns[5].textContent = 'Вы нажали на эту кнопку';
 })
 
+// задание 3
+// Создать кнопку, которая добавляем заголовок h1 с текстом, “Новый заголовок, данный элемент нужно расположить после кнопки
+// создаем кнопку
+const button = document.createElement('button');
+// добавляем в нее текст
+button.textContent = "push ME";
+// вставляем кнопку в body перед закрывающим тегом
+body.insertAdjacentElement('beforeend', button);
+// обратимся к кнопке
+button.addEventListener('click', () => {
+    // Вставляем после кнопки тег h1
+    body.insertAdjacentHTML('beforeend', `<h1>Новый заголовок</h1>`);
+})
+
+// Создать вторую кнопку, которая будет удалять созданный заголовок h1
+const btnRem = document.createElement('button');
+btnRem.textContent = "remove h1";
+body.insertAdjacentElement('beforeend', btnRem);
+btnRem.addEventListener('click', () => {
+    document.querySelector('h1').remove();
+})
+
+// Создать третью кнопку, при наведении на которую в консоль будет выводиться текст “вы навели на данную кнопку” , как только вы убираем курсор мыши с кнопки, в консоли должен появиться текст “Наведения на кнопку больше нет”
+const btnHower = document.createElement('button');
+btnHower.textContent = 'hower on Me';
+body.insertAdjacentElement('beforeend', btnHower);
+btnHower.addEventListener('mouseover', () => {
+    console.log('you hower on this button');
+})
+btnHower.addEventListener('mouseout', () => {
+    console.log('there is no hower on this button');
+});
+
+// задание 4
+// Создать в html список состоящий из 3-х произвольных элементов li
+// Нужно создать кнопку которая будет добавлять элементы списка с текстом “новый элемент списка”
+// Создать кнопку, которая будет удалять первый элемент из созданного списка
+// Создать кнопку, при клике на которую ей добавляется класс “click”
