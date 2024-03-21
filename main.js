@@ -89,5 +89,25 @@ btnHower.addEventListener('mouseout', () => {
 // задание 4
 // Создать в html список состоящий из 3-х произвольных элементов li
 // Нужно создать кнопку которая будет добавлять элементы списка с текстом “новый элемент списка”
+
+// находим список UL по классу
+const listUl = document.querySelector('.items');
+// создаем элемент кнопка
+const btnAdd = document.createElement('button');
+// назначаем текст кнопке
+btnAdd.textContent = 'add new list';
+// через body вставляем 
+body.insertAdjacentElement('beforeend', btnAdd);
+// назначаем кнопке действие по клику, добавлять элемент списка перед закрывающем тегом
+btnAdd.addEventListener('click', () => {
+    listUl.insertAdjacentHTML('beforeend', `<li>новый элемент списка</li>`);
+})
+
 // Создать кнопку, которая будет удалять первый элемент из созданного списка
+const btnRemList = document.createElement('button');
+btnRemList.textContent = 'remove first List';
+body.insertAdjacentElement('beforeend', btnRemList);
+btnRemList.addEventListener('click', () => {
+    listUl.firstChild.remove();
+})
 // Создать кнопку, при клике на которую ей добавляется класс “click”
