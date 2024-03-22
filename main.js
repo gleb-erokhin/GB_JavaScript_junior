@@ -26,8 +26,11 @@ buttonArray.forEach(button => {
 const menuFind = document.querySelector('.menu')
 menuFind.classList.remove('dropdown-menu');
 
-// 4. Используя метод insertAdjacentHTML добавьте после div'a с классом "dropdown" следующую разметку:
-//     `<a href="#">link</a>`
+// 4. Используя метод insertAdjacentHTML добавьте после div'a с классом "dropdown" следующую разметку: <a href="#">link</a>
+const divFind = document.querySelector('div.dropdown');
+// консоль добавлена для отладки
+console.log(divFind);
+divFind.insertAdjacentHTML('beforeend', `<a href="#">link</a>`);
 
 // 5. У элемента с id "dropdownMenuButton" замените id на "superDropdown".
 
