@@ -1,7 +1,9 @@
 # Lesson 1 Introdaction
 
+<details close>
+<summary>Типы данных JS</summary>
 
-### Numbers
+## Numbers
 ***Объявление переменных***
 ```javascript
 const a = 5;
@@ -58,8 +60,11 @@ Math.trunc(-4.23) => -4; - отбрасывает дробную часть
 const num = 85.5555523232
 num.toFixed(3) => '85.555';
 ```
-***для вычисления большщих числе 2^53 степени ***
+
+## BigInt
+***для вычисления большщих числе 2^53 степени***
 ```javascript
+хранит только целые значения
 556564846168461641861681616521351384461618n;
 смешивать можно только с таким же числом, либо сделать преоброзование в Number
 ```
@@ -67,4 +72,70 @@ num.toFixed(3) => '85.555';
 34343435453445314352144534n + BigInt(65656);
 Number(34343435453445314352144534n) + 65656;
 5n / 2n = > 2n; - дробная часть отметается
+```
+
+## Boolean
+```javascript
+const a =  true;
+const b = false;
+```
+
+## Null
+это означает ***ничто***.
+```javascript
+let d = Null; - создаем переменную, а положить туда не знаем что, можно положить Null
+d = 9;
+```
+
+## Undefind
+она не присвается ни какой переменной
+```javascript
+let e; => Undefind
+```
+</details>
+
+<details close>
+<summary>Свойства JS</summary>
+
+## typeof
+> позволяет определить тип параметра (число, строка, объект). Оператор возвращает строку, содержащую тип ( 'number' , 'string' , 'object').
+
+```javascript
+const f = '5';
+console.log(typeof f) => str;
+
+!ошибка typeof
+const j = null;
+console.log(typeof j) => object;
+это не так, должно быть таписано Null, это ошибка при разработке, оставили для обратной совместимости старых проектов.
+
+const k = function () {};
+console.log(typeof k) => function;
+это тоже ошибка, нет такого типа данных, должно быть object
+```
+</details>
+
+<details close>
+<summary>Операторы JS</summary>
+
+## Арифметические действия
+```javascript
+console.log(6 + 4) => 10;
+console.log(6 - 4) => 2;
+console.log(6 * 4) => 24;
+console.log(6 / 4) => 10;
+console.log(6 ** 4) => 10; - возведения в степень
+console.log(6 % 4) => 2; - остаток от деления, сколько раз 4 посеститься в 6, остаток это и есть ответ 
+```
+## Присваивание
+```javascript
+const m = 1;
+m += 2 ===> m = m + 2; 
+console.log(m) => 3;
+m++ - пост инкремент
+++m - пред инкремент
+```
+</details>
+
+```javascript
 ```
