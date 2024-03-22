@@ -40,12 +40,10 @@ for (const i of replace) {
 }
 
 // 6. Добавьте атрибут data - dd со значением 3 элементу у которого существует атрибут "aria-labelledby" равный "dropdownMenuButton" используя dataset.
-// const elem = document.querySelector('div.menu');
-// const value = elem.getAttribute('aria-labelledby');
-// console.log(value);
+const elem = document.querySelector('.menu');
 
-const elem = document.querySelector('div.menu');
-console.log(elem);
-if (value === 'dropdownMenuButton') {
+if (elem.getAttribute('aria-labelledby') === 'dropdownMenuButton') {
+    elem.dataset.dd = '3';
 }
+
 // 7. Удалите атрибут type у элемента с классом "dropdown-toggle".
