@@ -1,4 +1,7 @@
 # Lesson 1 Introdaction
+> Lavascript - язык программирования со слабой типизацией
+
+> Преоброзования типов JS делает автоматически если может. Это хорошо так как ненадо явно самому преобразовывать типы, но так же и плохо так как такое преоброзование может происходить без нашего участия.
 
 <details close>
 <summary>Типы данных JS</summary>
@@ -135,7 +138,23 @@ console.log(m) => 3;
 m++ - пост инкремент
 ++m - пред инкремент
 ```
-</details>
 
+## Конкатенация
 ```javascript
+console.log('m' + 'f') => 'mf';
+console.log('1' + '1') => '11';
+console.log('1' + 1) => '11';
+console.log(1 + 1) => 2;
 ```
+
+## Сравнения
+```javascript
+console.log(5 > 4) => true;
+console.log(5 >= 5) => true;
+console.log(5 < 5) => false;
+console.log(5 == '5') => true; - JS сам превратит строку в число и сравнит
+console.log(5 === '5') => false; - JS смотрит на тип данных и не преобразовывает их
+console.log(5 != '5') => false;
+console.log(5 !== '5') => true;
+```
+</details>
