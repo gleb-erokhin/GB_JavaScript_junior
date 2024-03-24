@@ -20,10 +20,18 @@ window.onload = () => {
 // 4. Сделайте, чтобы при наведении на textarea в консоли появлялось сообщение: "Вы навели на textarea."
 
 const textArea = document.querySelector('textarea');
-textArea.onclick = () => {
-    console.log('Вы навели на textarea');
-}
+textArea.addEventListener('mousemove', () => {
+    console.log('Вы навели на textarea.');
+})
+
 // 5. Необходимо повесить событие клика на тег ul.В обработчике события в консоль необходимо выводить текст, который записан внутри элемента кнопки, по которой был произведен клик.Если клик был не по кнопке, то ничего выводить не нужно.Необходимо использовать делегирование.
+
+const ulElement = document.querySelector('ul');
+ulElement.addEventListener('click', function (event) {
+    if (event.target.tagName === 'BUTTON') {
+        console.log(event.target.textContent);
+    }
+});
 
 // 6. Вопрос: Почему в console.log пишется сначала текст из 5 задания и только потом выводится текст из 3 задания, если мы кликаем по кнопкам в ul ? Ответ необходимо написать здесь же, под этим комментарием, своими словами.
 
