@@ -26,8 +26,8 @@ textArea.addEventListener('mousemove', () => {
 
 // 5. Необходимо повесить событие клика на тег ul.В обработчике события в консоль необходимо выводить текст, который записан внутри элемента кнопки, по которой был произведен клик.Если клик был не по кнопке, то ничего выводить не нужно.Необходимо использовать делегирование.
 
-const ulElement = document.querySelector('ul');
-ulElement.addEventListener('click', function (event) {
+const ulclickEl = document.querySelector('ul');
+ulclickEl.addEventListener('click', function (event) {
     if (event.target.tagName === 'BUTTON') {
         console.log(event.target.textContent);
     }
@@ -36,3 +36,9 @@ ulElement.addEventListener('click', function (event) {
 // 6. Вопрос: Почему в console.log пишется сначала текст из 5 задания и только потом выводится текст из 3 задания, если мы кликаем по кнопкам в ul ? Ответ необходимо написать здесь же, под этим комментарием, своими словами.
 
 // 7. С помощью JS необходимо изменить цвет заднего фона каждого второго тега li.
+
+const liCollor = document.querySelectorAll('li');
+for (let i = 1; i < liCollor.length; i = i + 2) {
+    console.log(liCollor[i]);
+    liCollor[i].style.background = "red"; 
+}
