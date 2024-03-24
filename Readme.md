@@ -1,5 +1,5 @@
 # Lesson 1 Introdaction
-> Lavascript - язык программирования со слабой типизацией
+> Javascript - язык программирования со слабой типизацией
 
 > Преоброзования типов JS делает автоматически если может. Это хорошо так как ненадо явно самому преобразовывать типы, но так же и плохо так как такое преоброзование может происходить без нашего участия.
 
@@ -51,6 +51,15 @@ console.log(Number.parseInt(str3)) => 66;
 Преобразует только то что может быть числом, до строки
 console.log(Number.parseFloat(str2)) => 66.2;
 
+Функции конструкторы
+String(true) => 'true';
+String(356) => '356';
+String(null) => 'null';
+Number('4') => 4;
+Number(true) => 1;
+Number(true) => 0;
+Boolean('') => false;
+Boolean('любой текст') => true;
 ```
 ***неявное приведение типов***
 JS язык с не строгой типизацией
@@ -209,4 +218,65 @@ alert(a) => 'hello';
 a = 'hello' => ERROR! a is not defined;
 alert(a);
 ```
+</details>
+
+
+<details close>
+<summary>Ветвления JS</summary>
+
+## Полная форма ветвления if / else
+```javascript
+const data = 100;
+// если в скобках TRUE то заходим в цикл if, в противном случае заходим в else
+if (data > 0) {
+    console.log(`Товаров в корзине: ${data}`)
+} else {
+    console.log(`Корзина пуста.`)
+}
+```
+
+```javascript
+const product = 'Яблоки';
+
+if (product === 'Бананы') {
+    console.log('Цена на бананы 50 руб.')
+} else if (product === 'Манго') {
+    console.log('Цена на манго 80 руб')
+} else if (product === 'Яблоки') {
+    console.log('Цена на Яблоки 40 руб')
+} else {
+    console.log('неизвестный фрукт')
+}
+// else необязательный
+```
+## Switch / case
+```javascript
+switch (product) {
+    case 'Бананы': 
+      console.log('Цена на бананы 50 руб.');
+      break;
+    case 'Манго': 
+      console.log('Цена на манго 80 руб');
+      break;
+    case 'Яблоки': 
+    case 'Груши': 
+      console.log('Цена на Яблоки 40 руб');
+      break;
+    default: 
+      console.log('неизвестный фрукт');
+}
+```
+## Тернарный оператор
+```javascript
+// условие ? если верно (true) : если ложь (false)
+data > 0
+  ? console.log(`Товаров в корзине: ${data}`)
+  : console.log(`Корзина пуста.`)
+// Тернарный оператор ВОЗВРАЩАЕТ значения
+```
+
+
+```javascript
+```
+
 </details>
