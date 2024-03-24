@@ -16,20 +16,17 @@ window.onload = () => {
 //         - которому был совершен клик.
 // - Необходимо использовать делегирование.
 
-const superEl = document.querySelectorAll('.super_element');
-for (let i = 0; i < superEl.length; i++) {
-    if (superEl[i].classList === 'super_element') {
-        const element = superEl[i];
-        console.log(element);
-
-    }
-}
-
-// superEl.addEventListener('click', function (event) {
-//     if (event.target.querySelector('.super_element')) {
-//         console.log('Класс "super_element" присутствует в элементе "div"');
-//     }
-// });
+// обращаемся ко всему тегу боди
+const superEl = document.querySelectorAll('body');
+// пробегаемся по всем дочерним элементам
+superEl.forEach(element => {
+    element.addEventListener('click', function(e) {
+        // проверяем присутствует ли нужный класс у тега, куда нажали мышкой
+        if (e.target.className === 'super_element') {
+            console.log('Класс "super_element" присутствует в элементе "div"');
+        }
+    })
+});
 
 // 4. Сделайте, чтобы при наведении на textarea в консоли появлялось сообщение: "Вы навели на textarea."
 
