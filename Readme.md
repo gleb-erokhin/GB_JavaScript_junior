@@ -258,7 +258,7 @@ switch (product) {
     case 'Манго': 
       console.log('Цена на манго 80 руб');
       break;
-    case 'Яблоки': 
+    case 'Яблоки':  
     case 'Груши': 
       console.log('Цена на Яблоки 40 руб');
       break;
@@ -274,9 +274,51 @@ data > 0
   : console.log(`Корзина пуста.`)
 // Тернарный оператор ВОЗВРАЩАЕТ значения
 ```
+</details>
 
+<details close>
+<summary>Функции в JS</summary>
+
+> Функциями являются так же:
+alert();
+console.log();
+prompt();
+
+> В функции работает принцип ***SOLID***, где
+***S*** - прицип единой ответственности, функция должна выполнять только одну задачу.
 
 ```javascript
+пример функции, ничего не возвращает:
+function sayPrice() {
+  console.log('Цена на бананы 50 руб.');
+}
+вызов функции:
+sayPrice();
 ```
-
+```javascript
+пример функции, возвращает результат работы:
+function getPrice() {
+  const resut = 25 + 25;
+  return result
+  // return возвращает значение и завершает функцию
+  // return так же может ничего не вернуть, а просто завершить работу функции
+}
+вызов функции:
+const price = getPrice();
+  console.log(`Цена ${price}`);
+```
+```javascript
+пример функции, использзование АРГУМЕНТА функции:
+const priceProduct = 25;
+// параметр функции в ( ) создается локальная переменная price 
+// локальная переменная существует пока работает функция
+function getPrice(price) {
+  const resut = price + 25;
+  return result
+}
+вызов функции:
+// аргумент функции не связан спеременными вне ее, может иметь любое имя
+const price = getPrice(priceProduct);
+  console.log(`Цена ${price}`);
+```
 </details>
