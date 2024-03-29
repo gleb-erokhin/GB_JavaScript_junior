@@ -1,16 +1,27 @@
 [
     {
-        "header": "MANGO PEOPLE T- SHIRT",
+        "header": "MANGO PEOPLE T-&nbsp;SHIRT",
         "price": 300,
         "color": "Red",
         "size": "XL",
-        "quantity": 2
+        "quantity": 2,
+        "img": "./img1.png"
+    
     },
     {
         "header": "ELLERY X M'O CAPSULE",
         "price": 52,
         "color": "Black",
         "size": "XL",
-        "quantity": 1
+        "quantity": 1,
+        "img": "./img2.png"
+    },
+    {
+        "header": "ELLERY X M'O CAPSULE",
+        "price": 52,
+        "color": "Black",
+        "size": "XL",
+        "quantity": 1,
+        "img": "./img2.png"
     }
 ]
