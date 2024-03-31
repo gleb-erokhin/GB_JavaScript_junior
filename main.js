@@ -6,18 +6,23 @@
 // При клике на кнопку отправить нужно проверять выбран ли активным элемент checkbox
 // Если элемент не выбран, добавить текст под чекбоксом “Необходимо согласиться с условиями”
 
+// создаем переменные с нужными классами
 const input = document.querySelector('input');
 const form = document.querySelector('form');
 const btn = document.querySelector('button');
 let error = false;
 
+// добавлям обработчик события КЛИК для кнопки
 btn.addEventListener("click", (e) => {
-    // для того чтобы при нажатии на кнопку ничего не отправлялось и страница не перегружалась
+    // для того чтобы при нажатии на кнопку ничего не отправлялось и страница не перегружалась (форма не отправляется)
     e.preventDefault();
+    // нуно проверять состояние ЧЕКБОСа, если он не нажат, обращаемся к INPUT к атрибуту checked, тогда
     if (!input.checked && !error) {
+        // создаем константу для текста условий
         const p = document.createElement("p");
         p.textContent = "Необходимо согласиться с условиями";
         p.classList.add('error');
+        // сообщение отобразится ПОСЛЕ кнопки отправить
         btn.insertAdjacentElement("afterend", p);
         error = true;
     } else if (input.checked) {
