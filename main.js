@@ -25,6 +25,7 @@ btn.addEventListener("click", (e) => {
         p.classList.add('error');
         // сообщение отобразится ПОСЛЕ кнопки отправить
         btn.insertAdjacentElement("afterend", p);
+        // параметр true не дает возможность повторять ошибку согласия с условиями
         error = true;
     // если галочка выбрана, то отправить форму через метод submit()
     } else if (input.checked) {
