@@ -61,17 +61,27 @@
 // Если пользователь вводит текст “пароль” то поле ввода должно быть подсвечено зеленым цветом
 // Если пароль неверный, у поля ввода появляется красная обводка и текст “пароль неверный”
 
-const password = document.querySelector("input");
-const btn = document.querySelector("button");
+// const password = document.querySelector("input");
+// const btn = document.querySelector("button");
 
-btn.addEventListener("click", (e) => {
-    e.preventDefault();
-    if(password.value === 'пароль') {
-       password.style.border = '3px solid green'; 
-    } else {
-       password.style.border = '3px solid red';
-       password.value = '';
-       password.placeholder = 'пароль не верный';
-    }
-});
+// btn.addEventListener("click", (e) => {
+//     e.preventDefault();
+//     if(password.value === 'пароль') {
+//        password.style.border = '3px solid green'; 
+//     } else {
+//        password.style.border = '3px solid red';
+//        password.value = '';
+//        password.placeholder = 'пароль не верный';
+//     }
+// });
 
+// задача 4
+// Создать поле ввода и под ним заголовок h1 с текстом “Заголовок”
+// При вводе текста в поле ввода необходимо чтобы текст внутри заголовка менятся на введенный в поле ввода
+
+const input = document.querySelector('input');
+const h1 = document.querySelector('h1');
+
+input.addEventListener(() => {
+    input.textContent = input.value;
+})
