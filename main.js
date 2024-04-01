@@ -61,9 +61,17 @@
 // Если пользователь вводит текст “пароль” то поле ввода должно быть подсвечено зеленым цветом
 // Если пароль неверный, у поля ввода появляется красная обводка и текст “пароль неверный”
 
-const input = document.querySelector("input");
-const btn = document / queueMicrotask("button");
+const password = document.querySelector("input");
+const btn = document.querySelector("button");
 
 btn.addEventListener("click", (e) => {
-    e.prevenr
+    e.preventDefault();
+    if(password.value === 'пароль') {
+       password.style.border = '3px solid green'; 
+    } else {
+       password.style.border = '3px solid red';
+       password.value = '';
+       password.placeholder = 'пароль не верный';
+    }
 });
+
