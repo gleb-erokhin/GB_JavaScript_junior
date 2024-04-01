@@ -40,18 +40,25 @@
 // Если выбран чай, необходимо вывести сообщение “Чай закончился”
 // Если выбран кофе, необходимо вывести соообщение “кофе закончился”
 
-const radio = document.querySelectorAll('input');
-const btn = document.querySelector('button');
-const p = document.querySelector('p');
+// const radio = document.querySelectorAll('input');
+// const btn = document.querySelector('button');
+// const p = document.querySelector('p');
 
-btn.addEventListener('click', (e) => {
-    e.preventDefault();
-    radio.forEach((item) => {
-        // проверяем нажата ли кнопка и чтобы был нужный ID
-        if(item.checked && item.id === "tea") {
-            p.textContent = 'Чай закончился';
-        } else if(item.checked && item.id === "coffe") {
-            p.textContent = 'кофе закончился';
-        }
-    })
-})
+// btn.addEventListener('click', (e) => {
+//     e.preventDefault();
+//     radio.forEach((item) => {
+//         // проверяем нажата ли кнопка и чтобы был нужный ID
+//         if(item.checked && item.id === "tea") {
+//             p.textContent = 'Чай закончился';
+//         } else if(item.checked && item.id === "coffe") {
+//             p.textContent = 'кофе закончился';
+//         }
+//     })
+// })
+
+// задание 3
+// Создать поле ввода (пароль)
+// Кнопка отправить
+// Если пользователь вводит текст “пароль” то поле ввода должно быть подсвечено зеленым цветом
+// Если пароль неверный, у поля ввода появляется красная обводка и текст “пароль неверный”
+
