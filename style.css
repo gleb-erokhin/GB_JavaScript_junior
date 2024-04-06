@@ -1,0 +1,19 @@
+.work1 {
+    padding: 15px;
+    border: 1px solid red;
+    margin-bottom: 15px;
+}
+.work2 {
+    padding: 15px;
+    border: 1px solid green;
+    margin-bottom: 15px;
+}
+.work3 {
+    padding: 15px;
+    border: 1px solid blue;
+    margin-bottom: 15px;
+}
+
+.error {
+    border: 1px solid red;
+}

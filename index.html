@@ -1,46 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Задание 4</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Задание 4</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
 
-<body>
-    <input id="from" type="text">
-    В инпуте написано: <span></span>
+    <body>
+        <p>Задание 1</p>
+        <div class="work1">
+            <input id="from" type="text">
+            В инпуте написано: <span></span>
+        </div>
 
-    <br>
+        <p>Задание 2</p>
+        <div class="work2">
+            <button class="messageBtn">Скрыть блок</button>
+            <div class="message">
+                Привет
+            </div>
+        </div>
 
-    <button class="messageBtn">Показать блок</button>
-    <div class="message">
-        Привет
-    </div>
+        <p>Задание 3</p>
+        <div class="work3">
+            <form>
+                <label>
+                    Первый инпут:
+                    <input class="form-control" type="text">
+                </label>
+                <br>
+                <br>
+                <label>
+                    Второй инпут:
+                    <select class="form-control">
+                        <option value=""></option>
+                        <option value="1">Один</option>
+                        <option value="2">Два</option>
+                    </select>
+                </label>
+                <br>
+                <br>
+                <button>Отправить</button>
+            </form>
+        </div>
 
-    <br>
-
-    <form>
-        <label>
-            Первый инпут:
-            <input class="form-control" type="text">
-        </label>
-        <br>
-        <br>
-        <label>
-            Второй инпут:
-            <select class="form-control">
-                <option value=""></option>
-                <option value="1">Один</option>
-                <option value="2">Два</option>
-            </select>
-        </label>
-        <br>
-        <br>
-        <button>Отправить</button>
-    </form>
-
-    <script src="main.js"></script>
-</body>
+        <script src="main.js"></script>
+    </body>
 
 </html>

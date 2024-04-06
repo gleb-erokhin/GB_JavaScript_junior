@@ -25,3 +25,17 @@ mesBtn.addEventListener('click', () => {
 // 3. Необходимо при отправке формы проверить, заполнены ли все поля в этой форме. Если какое-либо поле не заполнено, форма не должна отправляться, также должны быть подсвечены незаполненные поля (необходимо поставить класс error незаполненным полям). Как только пользователь начинает заполнять какое-либо поле, необходимо, при вводе в данное поле, произвести проверку:
 // - Если поле пустое, необходимо данное поле подсветить (поставить класс error данному полю).
 // - Если поле было чем-либо заполнено, подсветку (класс error) необходимо убрать.
+
+const form = document.querySelector('form');
+const inputTwo = document.querySelectorAll('.form-control');
+
+form.addEventListener('submit', (e) => {
+    inputTwo.forEach(element => {
+        if (element.value === "") {
+            element.classList.add('error');
+            e.preventDefault();
+        } else if (element.value !== "") {
+            element.classList.remove('error');
+        }
+    });
+})
