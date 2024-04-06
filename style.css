@@ -1,0 +1,38 @@
+.wraper {
+    width: 500px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wraper__container {
+    padding-bottom: 50px;
+}
+
+.wraper-contains {
+    width: 500px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.wraper-contains__lists {
+    width: 150px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+}
+
+.wraper-contains__list {
+    display: flex;
+    justify-content: space-between;
+}
+
+img {
+    width: 100%;
+}
+
+.wraper-contains__item_info {
+    flex-direction: column;
+}
