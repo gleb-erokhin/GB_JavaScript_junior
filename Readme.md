@@ -592,10 +592,45 @@ id (result != undefined) {
   alert(result);
 }
 ```
+
 </details>
 
 <details close>
-<summary> </summary>
+<summary>Spread, rest оператор </summary>
+Введено в работу с ES2015, предназначено для работы с массивами
 
+## Spread оператор расширения, Rest оператор сбора остатка в массив.
+```javascript
+Все просто если мы работам с переменнымми, 
+
+Spead оператор
+function max(p1, p2) {
+  if (p1 > p2) {
+    return p1;
+  } else if (p1 < p2) {
+    return p2;
+  } else {
+    return "числа равны";
+  }
+}
+
+Но возникает вопрос при работе с массивом, все это накладывает работу по обходу массива и вытаскивание его значений.
+
+const arr = [1, 5];
+// spread оператор решает это быстрее, значения сразу будут переданы в параметры функции
+console.log(max(...arr));
+
+Rest оператор
+const arr = [1, 5, 6, 12];
+
+function max(p1, p2, ...rest) {
+  if (p1 > p2) {
+    console.log(p1);
+  } else if (p1 < p2) {
+    console.log(p2);
+  } console.log(rest)
+}
+console.log(max(...arr)); => получим максимальное число 5, и массив с оставшимися значениями
+```
 
 </details>
